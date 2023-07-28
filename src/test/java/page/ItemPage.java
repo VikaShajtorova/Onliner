@@ -11,11 +11,11 @@ public class ItemPage extends BasePage {
     public static final By TV_TITLE = By.xpath("//h1[text()='Телевизоры']");
 
     public String getNameProductFromList(){
-        List<WebElement> list = driver.findElements(By.xpath("//div[@class='schema-product__title']"));
+        List<WebElement> list = driver.findElements(By.xpath("//a[@class='js-product-title-link']"));
         return list.get(0).getText();
     }
     public void clickNameProductFromList(){
-        List<WebElement> list = driver.findElements(By.xpath("//div[@class='schema-product__title']"));
+        List<WebElement> list = driver.findElements(By.xpath("//a[@class='js-product-title-link']"));
         list.get(0).click();
     }
 

@@ -8,11 +8,12 @@ public class OnlinerTest extends BaseTest{
     public void openTV(){
         onlinerPage.open();
         onlinerPage.clickMenuOption("Телевизоры");
-        itemPage.getNameProductFromList();
+        String itemName = itemPage.getNameProductFromList();
         itemPage.clickNameProductFromList();
 
 
-        assertEquals(itemPage.getNameProductFromList(),tvPage.getNameProduct());
+
+        assertEquals(itemName,tvPage.getNameProduct());
 
     }
 
